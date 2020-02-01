@@ -1,4 +1,4 @@
-# catKlick: The most innovative Cat Photo Uploader Web App of the Decade.
+# katClick: The most innovative Cat Photo Uploader Web App of the Decade.
 
 A project based on cat photos and machine learning. Allows users to upload an image of their cat and utilizes google cloud to compare the image to thousands of aesthetic/unaesthetic cat images and uses that data set to predict the user engagement that would occur if the image was uploaded on Instagram. 
 
