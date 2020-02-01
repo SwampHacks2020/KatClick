@@ -1,0 +1,1 @@
+instagram-scraper cat -u <username> -p <password> --tag -t image -m 100 --media-metadata -T {idf}
