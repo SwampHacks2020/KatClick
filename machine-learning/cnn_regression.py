@@ -31,7 +31,7 @@ maxPrice = trainAttrX["engagement"].max()
 trainY = trainAttrX["engagement"] / maxPrice
 testY = testAttrX["engagement"] / maxPrice
 
-model = f2.create_cnn(64, 64, 3, regress=True)
+model = f2.create_cnn(256, 256, 3, regress=True)
 opt = Adam(lr=1e-3, decay=1e-3 / 200)
 model.compile(loss="mean_absolute_percentage_error", optimizer=opt)
 
@@ -50,5 +50,5 @@ mean = np.mean(absPercentDiff)
 std = np.std(absPercentDiff)
 
 locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
-print("[INFO] avg. engagement: " + df["engagement"].mean() + ", std engagement: " + df["engagement"].std())
+print("[INFO] avg. engagement: " + str(df["engagement"].mean()) + ", std engagement: " + str(df["engagement"].std()))
 print("[INFO] mean: {:.2f}%, std: {:.2f}%".format(mean, std))

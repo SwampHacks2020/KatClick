@@ -13,14 +13,14 @@ def load_cat_attributes(inputPath):
 
 def load_cat_images(df, inputPath):
 	images = []
-	data_path = os.path.join(inputPath, "*.jpg")
+	data_path = os.path.join(inputPath, "*_CROP.jpg")
 	files = glob.glob(data_path)
 
 	data = []
 	for f1 in files:
 		if "BAD" not in f1:
 			img = cv2.imread(f1)
-			img = cv2.resize(img, (64, 64))
+			img = cv2.resize(img, (256, 256))
 			data.append(img)
 
 	return np.array(data)
