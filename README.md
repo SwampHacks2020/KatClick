@@ -6,6 +6,8 @@ This is a proof of concept and could easily be scaled. This could be expanded to
 
 This project does not necessarily have to be restricted to just cat photos, the scope could be shifted to focus on people such as influencers, or be modified to suit company interests as far as marketing is concerned.
 
+https://github.com/jugnugs/katClickFrontend
+
 https://imgur.com/a/TItxh9n
 
 This project was made by:
