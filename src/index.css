@@ -1,0 +1,440 @@
+body {
+    --x: 0px;
+	--y: 0px;
+	image-rendering: pixelated;
+	background: url(images/spacebg1.png), url(images/spacebg2.png), url(images/spacebg3.png);
+	background-blend-mode: screen, screen, screen;
+    background-repeat: repeat, repeat, repeat;
+}
+.Title {
+    position: fixed;
+    left: 0;
+    top: 0;
+    text-align: center;
+    font-family: helvetica;
+    font-size: 30px;
+    color: #DCDCDC;
+    text-shadow: 0px 2px 3px #4d004d;
+    line-height: 1.5em;
+    background-color:#4d0099;
+    width: 100%;
+    height: auto;
+    z-index: 9999999;
+}
+.cat {
+    position: relative;
+    top: 120px;
+    margin: auto;
+    background: url(images/nyan.gif); 
+    background-repeat: no-repeat;
+    width: 264px;
+    height: 160px;
+}
+.uploadContainer {
+    position: relative;
+    top: 200px;
+    width: 200px;
+    height: auto;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.uploadButton {
+    background-color: #ea536d;
+    background-repeat: no-repeat;
+    margin: 10px 0 0 0;
+    width: 200px;
+    height: 60px;
+    border: none;
+}
+
+.uploadText {
+    font-family: helvetica;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px; 
+    font-size: 25px;
+    color: #DCDCDC;
+    text-shadow: 0px 2px 3px #4d004d;
+}
+
+.CardView {
+	position: relative;
+    top: 200px;
+    width: 200px;
+    height: 400px;
+    margin: auto;
+    display: block;
+    justify-content: center;
+	align-items: center;
+	background-color: antiquewhite;
+}
+
+.flier {
+    background-image: url(images/flier.gif);
+    width: 100px;
+    height: 100px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.flier {
+/* The animation duration can change the speed as well, lower for faster
+higher for slower */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+ /* Edit the X and Y to change the location on the screen. There
+ is probably a better way to do this besides repeating the code
+ individually every time but I can't think of it right now.
+ The keyframes name corresponds with what number it is, e.g.
+ fly, fly2, fly3, etc.
+ You can search for whichever icon is giving trouble via its name
+ (coinCat) for example, and then you would see it is fly3, allowing
+ easy editing later. Hopefully this can be optimized when moving
+ to a framework/library. */
+
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(100%) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100%) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100%) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20%) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10%) translateY(100vh) rotateZ(0deg)
+	}
+}
+
+.balloonCat {
+    pointer-events: none;
+    background-image: url(images/ballooncat.gif);
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.balloonCat {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly2 70s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly2 {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-50%) translateY(60vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(70%) translateY(-80%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(30%) translateY(-50%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-90%) translateY(9vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-90%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(60%) translateY(70vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(25%) translateY(-160%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(80%) translateY(200vh) rotateZ(0deg)
+	}
+}
+
+.coinCat {
+    pointer-events: none;
+    background-image: url(images/coincat.gif);
+    width: 100px;
+    height: 100px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+.coinCat {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly3 80s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly3 {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-40%) translateY(80vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(30%) translateY(90%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(150%) translateY(50%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-130%) translateY(15vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-150%) translateY(75%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(180%) translateY(-25vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(30%) translateY(125%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(100%) translateY(-10vh) rotateZ(0deg)
+	}
+}
+
+.ninjaCat {
+    pointer-events: none;
+    background-image: url(images/ninjacat.gif);
+    width: 100px;
+    height: 100px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.ninjaCat {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly4 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly4 {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(20%) translateY(30vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(85%) translateY(-125%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(30%) translateY(-15%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(150%) translateY(30vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-125%) translateY(80%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(160%) translateY(20vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(15%) translateY(-75%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+}
+
+.pianoCat {
+    pointer-events: none;
+    background-image: url(images/pianocat.gif);
+    width: 100px;
+    height: 100px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+.pianoCat {
+        animation: fly5 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+@keyframes fly5 {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(75%) translateY(-80vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(30%) translateY(80%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(180%) translateY(-60%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(20%) translateY(80vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(20%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(30%) translateY(90vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(80%) translateY(-85%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(100%) translateY(200vh) rotateZ(0deg)
+	}
+}
+
+.pirateCat {
+    pointer-events: none;
+    background-image: url(images/piratecat.gif);
+    width: 100px;
+    height: 100px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+.pirateCat {
+        animation: fly6 50s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+
+@keyframes fly6 {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-70%) translateY(60vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(20%) translateY(-90%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(-70%) translateY(20%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(150%) translateY(70vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-70%) translateY(-75%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(120%) translateY(90vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(50%) translateY(-50%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(-15%) translateY(200vh) rotateZ(0deg)
+	}
+}
