@@ -18,4 +18,6 @@ Azhar Baig (https://github.com/azharbaig171),
 and
 Anthony Ngo (https://github.com/AnthonyJNgo).
 
-https://swamphacks2020catclique.github.io/catplaceholder/
+Due to time constraints (Hackathon after all) this project does have some bugs. It may display oddly on mobile/larger/smaller size monitors.
+
+https://swamphacks2020catclique.github.io/KatClick/
